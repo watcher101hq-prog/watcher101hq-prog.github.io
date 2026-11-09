@@ -55,6 +55,21 @@ a:hover { text-decoration: underline; }
 .top nav { margin-left: auto; display: flex; gap: 22px; font-size: .95rem; }
 .top nav a { color: var(--muted); font-weight: 500; }
 .top nav a:hover, .top nav a[aria-current] { color: var(--text); text-decoration: none; }
+.top nav { align-items: center; }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 22px; border-radius: 12px; font-weight: 600; font-size: 1rem;
+  color: #fff; background: linear-gradient(90deg, #229ED9, var(--accent-2));
+  box-shadow: 0 6px 20px color-mix(in srgb, #229ED9 35%, transparent);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.btn:hover { text-decoration: none; transform: translateY(-1px); box-shadow: 0 10px 28px color-mix(in srgb, #229ED9 45%, transparent); }
+.btn .tg { width: 20px; height: 20px; }
+.top nav a.btn-sm, .top nav a.btn-sm:hover { color: #fff; padding: 8px 14px; font-size: .9rem; border-radius: 10px; box-shadow: none; }
+.cta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; margin-top: 28px; }
+.cta-note { color: var(--muted); font-size: .9rem; }
 
 /* Hero */
 .hero {
@@ -168,6 +183,7 @@ section.block + footer.site { margin-top: 0; }
   .grid3, .grid2 { grid-template-columns: 1fr; }
   section.block { padding: 56px 0; }
   .top nav { gap: 16px; }
+  .top nav a.btn-sm { display: none; }
   .doc { padding-top: 40px; }
   .doc p, .doc ul { margin-left: 0; }
   footer.site nav { margin-left: 0; }
