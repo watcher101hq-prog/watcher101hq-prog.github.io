@@ -190,6 +190,7 @@ code {
 .guide h2 { display: block; margin-top: 32px; }
 .guide h2::before { content: none; }
 .guide p, .guide .cmds { margin-left: 0; width: 100%; }
+.guide ul { margin-left: 0; }
 
 /* Footer */
 footer.site { border-top: 1px solid var(--line); margin-top: 72px; }
