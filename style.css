@@ -167,6 +167,30 @@ code {
   background: var(--bg-soft); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px;
 }
 
+/* Guide */
+.steps { list-style: none; counter-reset: st; padding: 0; margin: 20px 0 0; display: grid; gap: 12px; }
+.steps li {
+  counter-increment: st; position: relative; padding: 16px 18px 16px 60px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow);
+}
+.steps li::before {
+  content: counter(st); position: absolute; left: 18px; top: 15px; width: 28px; height: 28px; border-radius: 9px;
+  display: grid; place-items: center; font-weight: 700; font-size: .9rem; color: #fff;
+  background: linear-gradient(135deg, #229ED9, var(--accent-2));
+}
+.doc .steps { margin-left: 0; }
+.cmds { width: 100%; border-collapse: separate; border-spacing: 0; margin: 10px 0 0; font-size: .95rem;
+  border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--card); }
+.cmds td { padding: 10px 14px; border-top: 1px solid var(--line); vertical-align: top; }
+.cmds tr:first-child td { border-top: 0; }
+.cmds td:first-child { white-space: nowrap; width: 1%; }
+.doc h3 { margin: 22px 0 0; font-size: 1rem; color: var(--muted); font-weight: 600; }
+.doc .cmds, .doc h3 { margin-left: 38px; width: calc(100% - 38px); }
+
+.guide h2 { display: block; margin-top: 32px; }
+.guide h2::before { content: none; }
+.guide p, .guide .cmds { margin-left: 0; width: 100%; }
+
 /* Footer */
 footer.site { border-top: 1px solid var(--line); margin-top: 72px; }
 footer.site .wrap { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; padding-top: 28px; padding-bottom: 36px; font-size: .9rem; color: var(--muted); }
@@ -186,5 +210,6 @@ section.block + footer.site { margin-top: 0; }
   .top nav a.btn-sm { display: none; }
   .doc { padding-top: 40px; }
   .doc p, .doc ul { margin-left: 0; }
+  .doc .cmds, .doc h3 { margin-left: 0; width: 100%; }
   footer.site nav { margin-left: 0; }
 }
